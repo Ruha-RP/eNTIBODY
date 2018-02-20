@@ -15,8 +15,8 @@
                     @endif
 
                     @component('components.who')
-
                     @endcomponent
+                    
                 </div>
             </div>
         </div>
