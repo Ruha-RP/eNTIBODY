@@ -14,6 +14,7 @@
                         <li>Research 1</li>
                         <li>Research 2</li>
                     </ol>
+                    <a href="#">PubMed Link</a>
                 </div>
             </div>
         </div>
