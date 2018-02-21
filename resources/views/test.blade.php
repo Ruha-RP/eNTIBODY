@@ -110,7 +110,7 @@
            data-dismiss="modal">Close</button>
         <span class="pull-right">
           <!-- This button will route to result input page -->  
-          <button type="button" class="button">
+          <button type="button" class="button" onclick="location.href='/users/test/inputresult';">
             Test Completed
           </button>
         </span>
