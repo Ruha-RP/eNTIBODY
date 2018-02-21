@@ -18,7 +18,30 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/users/logout', 'Auth\LoginController@userLogout')->name('user.logout');
+
+
+//Employee Routes
+Route::prefix('users')->group(function() {
+
+	Route::get('/logout', 'Auth\LoginController@userLogout')->name('user.logout');
+
+	//This Route will lead to Test information
+	Route::get('/info', function() {
+		return view ('info');
+	});
+
+	//This Route will lead to All Patients
+	Route::get('/patients', function() {
+		return view ('patients');
+	});
+
+	//This Route will lead to the Test Screen
+	Route::get('/test', function() {
+		return view ('test');
+	});
+
+});
+
 
 
 Route::prefix('admin')->group(function() {
