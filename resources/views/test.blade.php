@@ -77,4 +77,46 @@
   </div>
 </div>
 
+
+<!-- Modal to Input Patient Details -->
+<div class="modal fade" id="startNowModal" 
+     tabindex="-1" role="dialog" 
+     aria-labelledby="startNowModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" 
+          data-dismiss="modal" 
+          aria-label="Close" >
+          <span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" 
+        id="startNowModalLabel">Start Now</h4>
+      </div>
+      <div class="modal-body">
+        <!-- This part outlines the SOP -->
+        <p>This is how you perform the test</p>
+        <ol> Steps:
+            <li>first step</li>
+            <li>second step</li>
+            <li>third step</li>
+            <li>fourth step</li>
+        </ol>
+        <!-- This part gives functionality of a timer -->
+        <a href="#">Start Timer</a>
+      </div>
+      <div class="modal-footer">
+        <button type="button" 
+           class="button" 
+           data-dismiss="modal">Close</button>
+        <span class="pull-right">
+          <!-- This button will route to result input page -->  
+          <button type="button" class="button">
+            Test Completed
+          </button>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
 @endsection
