@@ -28,17 +28,17 @@ Route::prefix('users')->group(function() {
 	//This Route will lead to Test information
 	Route::get('/info', function() {
 		return view ('info');
-	});
+	})->middleware('auth');
 
 	//This Route will lead to All Patients
 	Route::get('/patients', function() {
 		return view ('patients');
-	});
+	})->middleware('auth');
 
 	//This Route will lead to the Test Screen
 	Route::get('/test', function() {
 		return view ('test');
-	});
+	})->middleware('auth');
 
 	//This Route will lead to the Input Results Screen
 	Route::get('/test/inputresult', function() {
