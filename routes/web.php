@@ -43,7 +43,7 @@ Route::prefix('users')->group(function() {
 	//This Route will lead to the Input Results Screen
 	Route::get('/test/inputresult', function() {
 		return view ('inputresult');
-	});
+	})->middleware('auth');
 
 });
 
