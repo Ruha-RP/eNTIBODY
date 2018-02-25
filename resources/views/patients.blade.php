@@ -11,12 +11,10 @@
                     <h1> ALL PATIENTS </h1>
                     <p>Click on a patient for more Details</p>
                     <p>Search by PID or Name</p>
-                    <ol>List:
-                        <li>Patient 1</li>
-                        <li>Patient 2</li>
-                        <li>Patient 3</li>
-                        <li>Patient 4</li>
-                    </ol>
+
+                    @foreach ($patients as $patient)
+                        <li> {{ $patient -> name }} </li>
+                    @endforeach
                     
                 </div>
             </div>

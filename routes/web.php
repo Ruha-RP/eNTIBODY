@@ -32,7 +32,8 @@ Route::prefix('users')->group(function() {
 
 	//This Route will lead to All Patients
 	Route::get('/patients', function() {
-		return view ('patients');
+		$patients = DB::table('patients')->get();
+		return view ('patients', compact ('patients'));
 	})->middleware('auth');
 
 	//This Route will lead to the Test Screen
