@@ -16,8 +16,8 @@ class MakePatientsTable extends Migration
         Schema::create('patients', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->integer('Hospital Number');
-            $table->date('Date of Birth');
+            $table->integer('hospital_number');
+            $table->date('dob');
             $table->timestamps();
         });
     }
