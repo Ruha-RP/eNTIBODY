@@ -12,9 +12,21 @@
                     <p>Click on a patient for more Details</p>
                     <p>Search by PID or Name</p>
 
-                    @foreach ($patients as $patient)
-                        <li> {{ $patient -> name }} </li>
-                    @endforeach
+
+                    <table class = "table">
+                        <tr>
+                            <th>Hospital Number</th>
+                            <th>Name</th>
+                        </tr>
+                      
+                            @foreach ($patients as $patient)
+                            <tr>
+                            <td> {{ $patient -> hospital_number }}</td>
+                            <td> {{ $patient -> name }}</td>
+                            </tr>
+                            @endforeach
+                    </table>
+                    
                     
                 </div>
             </div>
