@@ -23,7 +23,8 @@ class PatientController extends Controller
      */
     public function create()
     {
-        //
+        // load the create form (app/views/patients/create.blade.php)
+        return View::make('patients.create');
     }
 
     /**
