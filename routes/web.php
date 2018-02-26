@@ -48,6 +48,8 @@ Route::prefix('users')->group(function() {
 
 });
 
+//The resource controller
+Route::resource('patients', 'PatientController');
 
 
 Route::prefix('admin')->group(function() {
