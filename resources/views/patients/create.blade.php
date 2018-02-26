@@ -17,7 +17,7 @@
 
                         <div class="form-group">
                         <label for="title">Name</label>
-                        <input type="text" class="form-control" id="patientName"  name="title">
+                        <input type="text" class="form-control" id="name"  name="name">
                         </div>
 
                         <div class="form-group">
