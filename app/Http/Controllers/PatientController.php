@@ -37,9 +37,17 @@ class PatientController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //Validate
+        $request->validate([
+            'name' => 'required',
+            'hospital_number' => 'required',
+            'dob' => 'required',
+        ]);
+        
+        $patient = Patient::create(['name' => $request->name,'hospital_number' => $request->hospital_number,'dob' => $request->dob ]);
+        return redirect('/patients/'.$patient->id);
     }
-
+    
     /**
      * Display the specified resource.
      *
