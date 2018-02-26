@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
 class PatientController extends Controller
 {
     /**
@@ -24,7 +25,8 @@ class PatientController extends Controller
     public function create()
     {
         // load the create form (app/views/patients/create.blade.php)
-        return View::make('patients.create');
+        return view('patients.create');
+
     }
 
     /**

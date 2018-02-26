@@ -1,43 +1,53 @@
-<html>
-<head>
-    <title>Look! I'm CRUDding</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-</head>
-<body>
+@extends('layouts.app')
+
+@section('content')
 <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card card-default">
+                <div class="card-header">USER Dashboard</div>
 
-<nav class="navbar navbar-inverse">
-    <div class="navbar-header">
-        <a class="navbar-brand" href="{{ URL::to('patients') }}">patient Alert</a>
+                <div class="card-body">
+                    <h1>Add New Patient</h1>
+                    <hr>
+
+                    <form action="/patients" method="post">
+
+                        {{ csrf_field() }}
+
+                        <div class="form-group">
+                        <label for="title">Name</label>
+                        <input type="text" class="form-control" id="patientName"  name="title">
+                        </div>
+
+                        <div class="form-group">
+                        <label for="hospital_number">Hospital Number</label>
+                        <input type="number" class="form-control" id="hospital_number" name="hospital_number">
+                        </div>
+
+                        <div class="form-group">
+                        <label for="dob">DOB</label>
+                        <input type="date" class="form-control" id="dob" name="dob">
+                        </div>
+
+                        @if ($errors->any())
+                        <div class="alert alert-danger">
+                        <ul>
+                        @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                        </ul>
+                        </div>
+                        @endif
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>             
+            </div>
+
+        </div>
     </div>
-    <ul class="nav navbar-nav">
-        <li><a href="{{ URL::to('patients') }}">View All patients</a></li>
-        <li><a href="{{ URL::to('patients/create') }}">Create a patient</a>
-    </ul>
-</nav>
+</div>
+ @endsection
 
-<h1>Create a patient</h1>
 
-<!-- if there are creation errors, they will show here -->
-{{ HTML::ul($errors->all()) }}
 
-{{ Form::open(array('url' => 'patients')) }}
 
-    <div class="form-group">
-        {{ Form::label('name', 'Name') }}
-        {{ Form::text('name', Input::old('name'), array('class' => 'form-control')) }}
-    </div>
-
-    <div class="form-group">
-        {{ Form::label('hospital_number', 'hospital_number') }}
-        {{ Form::hospital_number('hospital_number', Input::old('hospital_number'), array('class' => 'form-control')) }}
-    </div>
-
-    <div class="form-group">
-        {{ Form::label('dob', 'dob') }}
-        {{ Form::select('dob', array('0' => 'Select a Level', '1' => 'Sees Sunlight', '2' => 'Foosball Fanatic', '3' => 'Basement Dweller'), Input::old('dob'), array('class' => 'form-control')) }}
-    </div>
-
-    {{ Form::submit('Create the patient!', array('class' => 'btn btn-primary')) }}
-
-{{ Form::close() }}
