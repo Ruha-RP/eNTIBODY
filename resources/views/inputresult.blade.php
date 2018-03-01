@@ -7,19 +7,52 @@
             <div class="card card-default">
                 <div class="card-header">USER Dashboard</div>
 
-                <div class="card-body">
-                    <h1> INPUT TEST RESULT </h1>
-                    <p>The following is observed</p>
-                    <ol>Result 1:
-                        <li>Well 1</li>
-                        <li>Well 2</li>
-                        <li>Well 3</li>
-                    </ol>
-                    <ol>Result 2:
-                        <li>Well 1</li>
-                        <li>Well 2</li>
-                        <li>Well 3</li>
-                    </ol>
+                <div class="quizContent">
+        <form method="POST" id="quiz-form" action="users/test">
+
+
+
+            <label id="posC">
+            1. Positive Control Well
+                <br>         
+                <input type="radio" name="posC" value="true" id="noOne1" class="choice">Agglutination<br>
+              <input type="radio" name="posC" value="false" id="yesOne" class="choice">No Reaction<br>
+            </label> 
+            <br>
+            <br>
+
+            <label id="negC">
+            2. Negative Control Well
+                <br>         
+                <input type="radio" name="negC" value="true" id="yesTwo" class="choice">Agglutination<br>
+              <input type="radio" name="negC" value="false" id="noTwo1" class="choice">No Reaction<br>
+            </label>
+            <br>
+            <br>
+
+            <label id="d1">
+            3. Reagent D1 Well
+                <br>         
+                <input type="radio" name="d1" value="true" id="noThree1" class="choice">Agglutination<br>
+              <input type="radio" name="d1" value="false" id="noThree2" class="choice">No Reaction<br>
+            </label> 
+            <br>
+            <br>
+
+            <label id="d2">
+            4. Reagent D2 Well
+                <br>         
+                <input type="radio" name="d2" value="true" id="noFour1" class="choice">Agglutination<br>
+              <input type="radio" name="d2" value="false" id="yesFour" class="choice">No Reaction<br>
+            </label>
+            <br>
+            <br>
+
+        </form>
+        </div><!-- Closing quiz content div-->
+
+        <button type="submit" id="interpret" >Submit</button>
+
 
                     <!-- To open Modal for Interpeting Results -->
                     <button 

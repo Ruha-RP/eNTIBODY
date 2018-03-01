@@ -19,8 +19,7 @@
                        id="patient-details-section" 
                        type="button" 
                        class="button" 
-                       data-toggle="modal" 
-                       data-target="#inputPatientModal">
+                      onclick="location.href='/patients/create';">
                        Input Patient Details
                     </button>
 

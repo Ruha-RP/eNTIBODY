@@ -46,6 +46,9 @@ Route::prefix('users')->group(function() {
 		return view ('inputresult');
 	})->middleware('auth');
 
+	Route::resource('test', 'TestController');
+
+
 });
 
 //The resource controller

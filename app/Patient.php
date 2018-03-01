@@ -25,4 +25,9 @@ class Patient extends Model
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function test() {
+
+        return $this-> hasMany('App\Test');
+    }
 }
