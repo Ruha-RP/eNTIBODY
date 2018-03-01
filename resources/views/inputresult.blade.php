@@ -7,12 +7,53 @@
             <div class="card card-default">
                 <div class="card-header">USER Dashboard</div>
 
-                <div class="quizContent">
-        <form method="POST" id="quiz-form" action="users/test">
+
+                <!-- The Form -->
+
+                <!-- Opening the form -->
+                {!! Form::open(['route' => 'test.store', 'class' => 'ajax']) !!}
+
+                  {!! Form::hidden('ip', Request::getClientIp(), ['name' => 'ip']) !!}
+                    
+                    <!-- The Positive Control Well -->
+                    <div class="form-group required">
+                    {!! Form::label('posC', 'Positive Control') !!}
+                    {!! Form::radio('posC', 'true') !!} Agglutination
+                    {!! Form::radio('posC', 'false') !!} No Reaction
+                    </div>
+
+                    <!-- The Negative Control Well -->
+                    <div class="form-group required">
+                    {!! Form::label('negC', 'Negative Control') !!}
+                    {!! Form::radio('negC', 'true') !!} Agglutination
+                    {!! Form::radio('negC', 'false') !!} No Reaction
+                    </div>
+
+                    <!-- The d1 Reagent Well -->
+                    <div class="form-group required">
+                    {!! Form::label('d1', 'Reagent D1') !!}
+                    {!! Form::radio('d1', 'true') !!} Agglutination
+                    {!! Form::radio('d1', 'false') !!} No Reaction
+                    </div>
+
+                    <!-- The d2 Reagent Well -->
+                    <div class="form-group required">
+                    {!! Form::label('d2', 'Reagent D2') !!}
+                    {!! Form::radio('d2', 'true') !!} Agglutination
+                    {!! Form::radio('d2', 'false') !!} No Reaction
+                    </div>
+
+                    <!-- The Submit button -->
+                    <div class="form-group">
+                    {!! Form::submit('Submit result', ['class' => 'btn btn-primary btn-lg']) !!}
+                    </div>
+
+                <!-- Closing the form -->
+                {!! Form::close() !!}
 
 
 
-            <label id="posC">
+            <!-- <label id="posC">
             1. Positive Control Well
                 <br>         
                 <input type="radio" name="posC" value="true" id="noOne1" class="choice">Agglutination<br>
@@ -49,9 +90,9 @@
             <br>
 
         </form>
-        </div><!-- Closing quiz content div-->
+        </div> --><!-- Closing quiz content div-->
 
-        <button type="submit" id="interpret" >Submit</button>
+        <!-- <button type="submit" id="interpret" >Submit</button> -->
 
 
                     <!-- To open Modal for Interpeting Results -->
