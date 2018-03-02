@@ -9,6 +9,10 @@ class Test extends Model
     //
     public function patient()
     {
-    	return $this->belongsTo('App\Patient')
+    	return $this->belongsTo('App\Patient');
     }
+
+     protected $fillable = [
+        'posC', 'negC', 'd1', 'd2'
+    ];
 };

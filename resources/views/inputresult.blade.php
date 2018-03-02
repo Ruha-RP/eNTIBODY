@@ -11,36 +11,41 @@
                 <!-- The Form -->
 
                 <!-- Opening the form -->
-                {!! Form::open(['route' => 'test.store', 'class' => 'ajax']) !!}
+                {!! Form::open(['action' => 'TestController@store', 'class' => 'ajax', 'method' => 'POST']) !!}
 
                   {!! Form::hidden('ip', Request::getClientIp(), ['name' => 'ip']) !!}
                     
                     <!-- The Positive Control Well -->
                     <div class="form-group required">
                     {!! Form::label('posC', 'Positive Control') !!}
-                    {!! Form::radio('posC', 'true') !!} Agglutination
-                    {!! Form::radio('posC', 'false') !!} No Reaction
+                    {{ Form::select('posC', [
+                    'Agglutination' => 'Agglutination', 
+                    'No Reaction' => 'No Reaction']) }}
                     </div>
+
 
                     <!-- The Negative Control Well -->
                     <div class="form-group required">
                     {!! Form::label('negC', 'Negative Control') !!}
-                    {!! Form::radio('negC', 'true') !!} Agglutination
-                    {!! Form::radio('negC', 'false') !!} No Reaction
+                    {{ Form::select('negC', [
+                    'Agglutination' => 'Agglutination', 
+                    'No Reaction' => 'No Reaction']) }}
                     </div>
 
                     <!-- The d1 Reagent Well -->
                     <div class="form-group required">
                     {!! Form::label('d1', 'Reagent D1') !!}
-                    {!! Form::radio('d1', 'true') !!} Agglutination
-                    {!! Form::radio('d1', 'false') !!} No Reaction
+                    {{ Form::select('d1', [
+                    'Agglutination' => 'Agglutination', 
+                    'No Reaction' => 'No Reaction']) }}
                     </div>
 
                     <!-- The d2 Reagent Well -->
                     <div class="form-group required">
                     {!! Form::label('d2', 'Reagent D2') !!}
-                    {!! Form::radio('d2', 'true') !!} Agglutination
-                    {!! Form::radio('d2', 'false') !!} No Reaction
+                    {{ Form::select('d2', [
+                    'Agglutination' => 'Agglutination', 
+                    'No Reaction' => 'No Reaction']) }}
                     </div>
 
                     <!-- The Submit button -->
