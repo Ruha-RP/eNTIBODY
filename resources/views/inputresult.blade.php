@@ -50,7 +50,9 @@
 
                     <!-- The Submit button -->
                     <div class="form-group">
-                    {!! Form::submit('Submit result', ['class' => 'btn btn-primary btn-lg']) !!}
+                    {!! Form::submit('Submit result', ['class' => 'btn btn-primary btn-lg',
+                    'id' => 'interpret'
+                    ]) !!}
                     </div>
 
                 <!-- Closing the form -->
