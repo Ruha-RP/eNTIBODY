@@ -7,19 +7,98 @@
             <div class="card card-default">
                 <div class="card-header">USER Dashboard</div>
 
-                <div class="card-body">
-                    <h1> INPUT TEST RESULT </h1>
-                    <p>The following is observed</p>
-                    <ol>Result 1:
-                        <li>Well 1</li>
-                        <li>Well 2</li>
-                        <li>Well 3</li>
-                    </ol>
-                    <ol>Result 2:
-                        <li>Well 1</li>
-                        <li>Well 2</li>
-                        <li>Well 3</li>
-                    </ol>
+
+                <!-- The Form -->
+
+                <!-- Opening the form -->
+                {!! Form::open(['action' => 'TestController@store', 'class' => 'ajax', 'method' => 'POST']) !!}
+
+                  {!! Form::hidden('ip', Request::getClientIp(), ['name' => 'ip']) !!}
+                    
+                    <!-- The Positive Control Well -->
+                    <div class="form-group required">
+                    {!! Form::label('posC', 'Positive Control') !!}
+                    {{ Form::select('posC', [
+                    'Agglutination' => 'Agglutination', 
+                    'No Reaction' => 'No Reaction']) }}
+                    </div>
+
+
+                    <!-- The Negative Control Well -->
+                    <div class="form-group required">
+                    {!! Form::label('negC', 'Negative Control') !!}
+                    {{ Form::select('negC', [
+                    'Agglutination' => 'Agglutination', 
+                    'No Reaction' => 'No Reaction']) }}
+                    </div>
+
+                    <!-- The d1 Reagent Well -->
+                    <div class="form-group required">
+                    {!! Form::label('d1', 'Reagent D1') !!}
+                    {{ Form::select('d1', [
+                    'Agglutination' => 'Agglutination', 
+                    'No Reaction' => 'No Reaction']) }}
+                    </div>
+
+                    <!-- The d2 Reagent Well -->
+                    <div class="form-group required">
+                    {!! Form::label('d2', 'Reagent D2') !!}
+                    {{ Form::select('d2', [
+                    'Agglutination' => 'Agglutination', 
+                    'No Reaction' => 'No Reaction']) }}
+                    </div>
+
+                    <!-- The Submit button -->
+                    <div class="form-group">
+                    {!! Form::submit('Submit result', ['class' => 'btn btn-primary btn-lg']) !!}
+                    </div>
+
+                <!-- Closing the form -->
+                {!! Form::close() !!}
+
+
+
+            <!-- <label id="posC">
+            1. Positive Control Well
+                <br>         
+                <input type="radio" name="posC" value="true" id="noOne1" class="choice">Agglutination<br>
+              <input type="radio" name="posC" value="false" id="yesOne" class="choice">No Reaction<br>
+            </label> 
+            <br>
+            <br>
+
+            <label id="negC">
+            2. Negative Control Well
+                <br>         
+                <input type="radio" name="negC" value="true" id="yesTwo" class="choice">Agglutination<br>
+              <input type="radio" name="negC" value="false" id="noTwo1" class="choice">No Reaction<br>
+            </label>
+            <br>
+            <br>
+
+            <label id="d1">
+            3. Reagent D1 Well
+                <br>         
+                <input type="radio" name="d1" value="true" id="noThree1" class="choice">Agglutination<br>
+              <input type="radio" name="d1" value="false" id="noThree2" class="choice">No Reaction<br>
+            </label> 
+            <br>
+            <br>
+
+            <label id="d2">
+            4. Reagent D2 Well
+                <br>         
+                <input type="radio" name="d2" value="true" id="noFour1" class="choice">Agglutination<br>
+              <input type="radio" name="d2" value="false" id="yesFour" class="choice">No Reaction<br>
+            </label>
+            <br>
+            <br>
+
+        </form>
+        </div> --><!-- Closing quiz content div-->
+
+        <!-- <button type="submit" id="interpret" >Submit</button> -->
+
 
                     <!-- To open Modal for Interpeting Results -->
                     <button 
