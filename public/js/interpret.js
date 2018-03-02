@@ -13,22 +13,25 @@
 //If Well 3 is positive and Well 4 is negative (or vice versa), then Discrepancy in result, needs further testing
 
 //STEP 1: ***Getting the document ready***
-// $(document).ready(function() {
+$(document).ready(function() {
+
+	console.log("running interpret.js");
 
 // 	// New Stuff for posting
 
 // 	$('form.ajax').on('submit', function(event){
 //             event.preventDefault();
 
-//             var formData = {
-//                 posC     : $('select[name=posC]').val(),
-//                 negC    : $('select[name=negC]').val(),
-//                 d1 : $('select[name=d1]').val(),
-//                 d2  : $('select[name=d2]').val()
-//             };
+            // var formData = {
+            //     posC     : $('select[name=posC]').val(),
+            //     negC    : $('select[name=negC]').val(),
+            //     d1 : $('select[name=d1]').val(),
+            //     d2  : $('select[name=d2]').val()
+            // };
 
 
-//             console.log(formData);
+            // console.log(formData);
+            
 
 //             $.ajax({
 //             	beforeSend: function(xhr){xhr.setRequestHeader('X-CSRF-TOKEN', $("#token").attr('content'));},
@@ -55,7 +58,7 @@
 
 //             // alert('form is submited');
 //         });
-//     });
+    });
 
 // // Old Stuff for results interpretation
 
