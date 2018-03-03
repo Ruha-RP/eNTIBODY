@@ -41,7 +41,7 @@ class TestController extends Controller
 
             //Save the new test
             $test = Test::create(['posC' => $request->posC,'negC' => $request->negC,'d1' => $request->d1, 'd2' => $request->d2 ]);
-            return redirect('/home');
+            // return redirect('/home');
 
     }
 
