@@ -10,7 +10,7 @@ class Patient extends Model
     public function tests()
     {
         return $this->hasMany('App\Test');
-    };
+    }
     /**
      * The attributes that are mass assignable.
      *

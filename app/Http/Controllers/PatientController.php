@@ -58,6 +58,8 @@ class PatientController extends Controller
     public function show($id)
     {
         //
+         return view ('patients.show') -> withPatient (
+            Patient::find($id));
     }
 
     /**

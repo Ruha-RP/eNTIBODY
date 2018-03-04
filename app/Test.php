@@ -18,7 +18,7 @@ class Test extends Model
     // }
 
      protected $fillable = [
-        'posC', 'negC', 'd1', 'd2'
+        'posC', 'negC', 'd1', 'd2', 'patient_id'
     ];
 };
 

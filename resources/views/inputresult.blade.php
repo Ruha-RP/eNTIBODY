@@ -14,6 +14,10 @@
                 {!! Form::open(['action' => 'TestController@store', 'class' => 'ajax', 'method' => 'POST']) !!}
 
                   {!! Form::hidden('ip', Request::getClientIp(), ['name' => 'ip']) !!}
+
+                  {!! Form::hidden('patient_id', '1' ) !!}
+
+
                     
                     <!-- The Positive Control Well -->
                     <div class="form-group required">
