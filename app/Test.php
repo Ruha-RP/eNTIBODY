@@ -9,7 +9,7 @@ class Test extends Model
 
 	public function patient()
     {
-    	return $this->belongsTo(Patient::class);
+    	return $this->belongsTo('App\Patient');
     }
     //
     // public function patient()
