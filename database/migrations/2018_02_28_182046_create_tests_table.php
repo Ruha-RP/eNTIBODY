@@ -22,6 +22,7 @@ class CreateTestsTable extends Migration
             $table->string('negC');
             $table->string('d1');
             $table->string('d2');
+            $table->text('diagnosis');
             $table->timestamps();
         });
     }
