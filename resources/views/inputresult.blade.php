@@ -15,7 +15,7 @@
 
                   {!! Form::hidden('ip', Request::getClientIp(), ['name' => 'ip']) !!}
 
-                  {!! Form::hidden('patient_id', '1' ) !!}
+                  {!! Form::hidden('patient_id', Request::segment(2)) !!}
 
 
                     
