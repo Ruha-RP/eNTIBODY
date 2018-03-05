@@ -6,6 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Patient extends Model
 {
+
+    public function tests()
+    {
+        return $this->hasMany('App\Test');
+    }
     /**
      * The attributes that are mass assignable.
      *
@@ -26,8 +31,10 @@ class Patient extends Model
         'password', 'remember_token',
     ];
 
-    public function test() {
+    // public function test() {
 
-        return $this-> hasMany('App\Test');
-    }
+    //     return $this-> hasMany('App\Test');
+    // }
 }
+
+

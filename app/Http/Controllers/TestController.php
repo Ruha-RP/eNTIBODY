@@ -39,8 +39,8 @@ class TestController extends Controller
      
             // dd($request->all());
 
-            //Save the new test
-            $test = Test::create(['posC' => $request->posC,'negC' => $request->negC,'d1' => $request->d1, 'd2' => $request->d2 ]);
+            //Save the new test to the database
+            $test = Test::create(['posC' => $request->posC,'negC' => $request->negC,'d1' => $request->d1, 'd2' => $request->d2, 'patient_id' => $request->patient_id ]);
             // return redirect('/home');
 
     }

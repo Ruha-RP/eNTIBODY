@@ -42,11 +42,9 @@ Route::prefix('users')->group(function() {
 	})->middleware('auth');
 
 	//This Route will lead to the Input Results Screen
-	Route::get('/test/inputresult', function() {
-		return view ('inputresult');
-	})->middleware('auth');
-
-	
+	// Route::get('/test/inputresult', function() {
+	// 	return view ('inputresult');
+	// })->middleware('auth');
 
 
 });
@@ -55,6 +53,10 @@ Route::resource('test', 'TestController');
 
 //The resource controller
 Route::resource('patients', 'PatientController');
+
+Route::get('patients/{id}/test/inputresult', function() {
+		return view ('inputresult');
+	});
 
 
 Route::prefix('admin')->group(function() {
