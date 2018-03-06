@@ -42,7 +42,7 @@ class PatientController extends Controller
         $request->validate([
             'name' => 'required',
             'hospital_number' => 'required|unique:patients|min:6',
-            'dob' => 'required',
+            'dob' => 'required|date',
         ]);
         
         $patient = Patient::create(['name' => $request->name,'hospital_number' => $request->hospital_number,'dob' => $request->dob ]);
