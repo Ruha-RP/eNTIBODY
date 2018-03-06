@@ -105,12 +105,14 @@ $(document).ready(function() {
 
 		});//Closing the choice button on-click
 
+
  	 // The on-click that will trigger the functions
 	$("#interpret").on("click", run);
 
  	function run() {
 
- 		alert(diagnosis);
+ 		$("#diagnosis").text(diagnosis);
+
 
 	};//Closing the run function		
 
