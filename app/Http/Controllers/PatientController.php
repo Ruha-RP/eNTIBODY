@@ -41,7 +41,7 @@ class PatientController extends Controller
         //Validate
         $request->validate([
             'name' => 'required',
-            'hospital_number' => 'required',
+            'hospital_number' => 'required|unique:patients|min:6',
             'dob' => 'required',
         ]);
         
