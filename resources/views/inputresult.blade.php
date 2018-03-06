@@ -7,6 +7,8 @@
             <div class="card card-default">
                 <div class="card-header">USER Dashboard</div>
 
+                
+
 
                 <!-- The Form -->
 
@@ -54,59 +56,23 @@
 
                     <!-- The Submit button -->
                     <div class="form-group">
-                    {!! Form::submit('Submit result', ['class' => 'btn btn-primary btn-lg',
+                    {!! Form::button('View result', ['class' => 'button',
+                    'data-toggle' => 'modal' ,
+                    'data-target'=> '#interpretResultModal',
                     'id' => 'interpret'
                     ]) !!}
                     </div>
 
-                <!-- Closing the form -->
-                {!! Form::close() !!}
+                    <!-- The Submit button -->
+                    <div class="form-group">
+                    {!! Form::submit('Submit Diagnosis', ['class' => 'button'
+                    ]) !!}
+                    </div>
+
+              
 
 
-
-            <!-- <label id="posC">
-            1. Positive Control Well
-                <br>         
-                <input type="radio" name="posC" value="true" id="noOne1" class="choice">Agglutination<br>
-              <input type="radio" name="posC" value="false" id="yesOne" class="choice">No Reaction<br>
-            </label> 
-            <br>
-            <br>
-
-            <label id="negC">
-            2. Negative Control Well
-                <br>         
-                <input type="radio" name="negC" value="true" id="yesTwo" class="choice">Agglutination<br>
-              <input type="radio" name="negC" value="false" id="noTwo1" class="choice">No Reaction<br>
-            </label>
-            <br>
-            <br>
-
-            <label id="d1">
-            3. Reagent D1 Well
-                <br>         
-                <input type="radio" name="d1" value="true" id="noThree1" class="choice">Agglutination<br>
-              <input type="radio" name="d1" value="false" id="noThree2" class="choice">No Reaction<br>
-            </label> 
-            <br>
-            <br>
-
-            <label id="d2">
-            4. Reagent D2 Well
-                <br>         
-                <input type="radio" name="d2" value="true" id="noFour1" class="choice">Agglutination<br>
-              <input type="radio" name="d2" value="false" id="yesFour" class="choice">No Reaction<br>
-            </label>
-            <br>
-            <br>
-
-        </form>
-        </div> --><!-- Closing quiz content div-->
-
-        <!-- <button type="submit" id="interpret" >Submit</button> -->
-
-
-                    <!-- To open Modal for Interpeting Results -->
+     <!-- To open Modal for Interpeting Results -->
                     <button 
                        id="result-section" 
                        type="button" 
@@ -123,6 +89,9 @@
     </div>
 </div>
 
+
+
+<!-- MODAL -->
 <!-- Modal to show Interpreted Result -->
 <div class="modal fade" id="interpretResultModal" 
      tabindex="-1" role="dialog" 
@@ -142,19 +111,7 @@
         The Result is ... 
         </p>
         <div class="alert alert-success">
-          <strong>No Problem!</strong> Indicates a successful or positive action.
-        </div>
-
-        <div class="alert alert-info">
-          <strong>Info!</strong> Indicates a neutral informative change or action.
-        </div>
-
-        <div class="alert alert-warning">
-          <strong>Warning!</strong> Indicates a warning that might need attention.
-        </div>
-
-        <div class="alert alert-danger">
-          <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+          <div id="diagnosis">Diagnosis</div>
         </div>
 
       </div>
@@ -164,13 +121,14 @@
            data-dismiss="modal">Close</button>
         <span class="pull-right">
           <!--  Need to provide user feedback at this point  -->
-          <button type="button" class="button">
-            Confirm and Save
+          <button class="button" onclick="location.href='/patients/{{Request::segment(2)}}';"> Re-Do
           </button>
         </span>
       </div>
     </div>
   </div>
 </div>
+ <!-- Closing the form -->
+ {!! Form::close() !!}
 
 @endsection
