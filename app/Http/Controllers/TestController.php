@@ -42,7 +42,7 @@ class TestController extends Controller
             //Save the new test to the database
             $test = Test::create(['posC' => $request->posC,'negC' => $request->negC,'d1' => $request->d1, 'd2' => $request->d2, 'patient_id' => $request->patient_id ]);
 
-            // return view('diagnosis');
+            return view('location.href='/patients/Request::segment(2)';"');
 
           
 
@@ -56,7 +56,7 @@ class TestController extends Controller
      */
     public function show(Test $test)
     {
-        //
+        
     }
 
     /**
