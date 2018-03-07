@@ -67,29 +67,33 @@
           aria-label="Close" >
           <span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" 
-        id="startNowModalLabel">Start Now</h4>
+        id="startNowModalLabel"></h4>
       </div>
       <div class="modal-body">
         <!-- This part outlines the SOP -->
-        <p>This is how you perform the test</p>
-        <ol> Steps:
+        <p class="is-size-5" style="color:#26547C;"><strong style="color:#EF476F;">Standard Operating Procedure for RhD Typing</strong></p>
+        <div class="container">
+        <p><b>Steps:</b><p>
+        <ol> 
             <li>first step</li>
             <li>second step</li>
             <li>third step</li>
             <li>fourth step</li>
         </ol>
+      </div>
         <!-- This part gives functionality of a timer -->
-        <a href="#">Start Timer</a>
+        <!-- <a href="#">Start Timer</a> -->
       </div>
       <div class="modal-footer">
-        <button type="button" 
-           class="button" 
-           data-dismiss="modal">Close</button>
+
+        <button type="button " 
+           class="button is-primary is-outlined" 
+           data-dismiss="modal" style="color:#26547C;">Close</button>
         <span class="pull-right">
           <!-- This button will route to result input page -->  
-          <button type="button" class="button" onclick="location.href='{{$patient->id}}/test/inputresult';">
+          <button type="button" class="button is-primary is-outlined" onclick="location.href='{{$patient->id}}/test/inputresult';" style="color:#26547C;">
             Test Completed
- 		</button>
+ 		     </button>
           
         </span>
       </div>
