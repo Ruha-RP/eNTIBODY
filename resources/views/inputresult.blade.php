@@ -133,7 +133,7 @@
       <div class="modal-footer">
         <button type="button" 
            class="button" 
-           data-dismiss="modal">Close</button>
+           data-dismiss="modal">OK</button>
         <span class="pull-right">
           <!--  Need to provide user feedback at this point  -->
           <button class="button" onclick="location.href='/patients/{{Request::segment(2)}}';"> Re-Do
