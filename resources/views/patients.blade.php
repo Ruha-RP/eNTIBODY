@@ -9,15 +9,15 @@
 
                 <div class="card-body">
                     <h1> ALL PATIENTS </h1>
-                    <p>Click on a patient for more Details</p>
-
-                    <form class="navbar-form navbar-right" role="search">
+                    <!-- p>Click on a patient for more Details</p>
+ -->
+                    <!-- <form class="navbar-form navbar-right" role="search">
                       <div class="form-group">
                         <input type="text" class="form-control" placeholder="Search by PID or Name">
                       </div>
                       <button type="submit" class="button">Submit</button>
                     </form>
-                    <br>
+                    <br> -->
 
 
                     <table class = "table">
@@ -37,6 +37,11 @@
                             @endforeach
 
                     </table>
+
+                    <hr>
+                <p>Return to home</p>
+                <i class="fas fa-home is-size-5" style="color:#26547C;" onclick="location.href='/home';"></i>
+                </div>
                     
                     
                 </div>

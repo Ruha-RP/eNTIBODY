@@ -16,8 +16,8 @@
                     <p class="is-size-5" style="color:#26547C;"><strong style="color:#EF476F;">Rh D Test Screen</strong></p>
                     <p class="is-size-5" style="color:#26547C;">Before beginning the test, Please Input the Correct Patient Details as indicated on the 
                       <ul class="is-size-5" style="color:#26547C;">
-                          <li><i class="fab fa-wpforms"></i>  Sample Vial</li>
-                          <li><i class="fas fa-tint"></i>  Request form</li>
+                          <li><i class="fab fa-wpforms" style="color:#EF476F;"></i>  Sample Vial</li>
+                          <li><i class="fas fa-tint" style="color:#EF476F;"></i>  Request form</li>
                           
                       </ul>
                     </p>
