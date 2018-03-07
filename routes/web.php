@@ -49,14 +49,16 @@ Route::prefix('users')->group(function() {
 
 });
 
-Route::resource('test', 'TestController');
+Route::resource('test', 'TestController')->middleware('auth');;
 
 //The resource controller
-Route::resource('patients', 'PatientController');
+Route::resource('patients', 'PatientController')->middleware('auth');;
 
 Route::get('patients/{id}/test/inputresult', function() {
 		return view ('inputresult');
-	});
+	})->middleware('auth');;
+
+
 
 
 Route::prefix('admin')->group(function() {

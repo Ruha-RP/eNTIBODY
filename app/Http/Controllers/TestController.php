@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Test;
 use Illuminate\Http\Request;
+use App\Test;
 
 class TestController extends Controller
 {
@@ -14,8 +14,7 @@ class TestController extends Controller
      */
     public function index()
     {
-        //
-        return view ('test');
+
     }
 
     /**
@@ -42,7 +41,14 @@ class TestController extends Controller
             //Save the new test to the database
             $test = Test::create(['posC' => $request->posC,'negC' => $request->negC,'d1' => $request->d1, 'd2' => $request->d2, 'patient_id' => $request->patient_id ]);
 
-            return view('location.href='/patients/Request::segment(2)';"');
+            //gets all test results of all patients    
+            $tests = Test::all();
+
+
+            //gets reults of the patient with an id of 2    
+            // $tests = Test::where('patient_id', '=', 2)->get();
+
+            return view('diagnosis', compact('tests'));
 
           
 
@@ -54,8 +60,12 @@ class TestController extends Controller
      * @param  \App\Test  $test
      * @return \Illuminate\Http\Response
      */
-    public function show(Test $test)
+    public function show($id)
     {
+
+        // $tests = tests::where('id', '=', $id)->get();
+
+        // return view('diagnosis', compact('tests'));
         
     }
 

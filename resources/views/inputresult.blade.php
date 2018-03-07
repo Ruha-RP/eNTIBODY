@@ -65,12 +65,11 @@
 
                     <!-- The Submit button -->
                     <div class="form-group">
-                    {!! Form::submit('Submit Diagnosis', ['class' => 'button',
-                    'onclick =>"location.href='/patients/Request::segment(2)';"   
+                    {!! Form::submit('Submit Diagnosis', ['class' => 'button'
                     ]) !!}
                     </div>
 
-           
+              
 
 
      <!-- To open Modal for Interpeting Results -->
@@ -112,7 +111,6 @@
         The Result is ... 
         </p>
         <div class="alert alert-success">
-
           <div id="diagnosis">Diagnosis</div>
         </div>
 

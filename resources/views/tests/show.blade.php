@@ -1,22 +1,24 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Details for {{$test->patient_id}}</h1>
+@foreach ($tests as $test)
+<h1>Details for {{$test->test_id}}</h1>
 <hr>
 <ul class="list-group">
 	<li class="list-group-item">
-		<b>posC</b>:{{$->name}}
+		<b>posC</b>:{{$test->posC}}
 	</li>
 	<li class="list-group-item">
-		<b>negC</b>:{{$patient->hospital_number}}
+		<b>negC</b>:{{$test->negC}}
 	</li>
 	<li class="list-group-item">
-		<b>D1</b>:{{$patient->dob}}
+		<b>D1</b>:{{$test->d1}}
 	</li>
   <li class="list-group-item">
-    <b>D</b>:{{$patient->dob}}
+    <b>D</b>:{{$test->d2}}
   </li>
 </ul>
 <hr>
+@endforeach
 
 @stop
