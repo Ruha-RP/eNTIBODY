@@ -10,7 +10,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" id="token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'LabTest') }}</title>
+    <title>{{ config('app.name', 'eNTIBODY') }}</title>
 
     <!-- STYLES -->
     <!-- Bulma CSS Framework -->
