@@ -1,31 +1,58 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>Details for {{$patient->name}}</h1>
-<hr>
-<ul class="list-group">
-	<li class="list-group-item">
-		<b>Name</b>:{{$patient->name}}
-	</li>
-	<li class="list-group-item">
-		<b>Hospital Number</b>:{{$patient->hospital_number}}
-	</li>
-	<li class="list-group-item">
-		<b>DOB</b>:{{$patient->dob}}
-	</li>
-</ul>
-<hr>
-<!-- <button class="btn btn-info" onclick="location.href='{{$patient->id}}/inputresult';">Test them Now</button> -->
 
-<!-- To open Modal for Starting Test -->
-<button 
-   id="start-test-section" 
-   type="button" 
-   class="button" 
-   data-toggle="modal" 
-   data-target="#startNowModal">
-   Start Now
-</button>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+
+            <div class="card border-warning mb-3">
+                <div class="card-header">
+                    <span class="is-size-3" style="color:#26547C;">
+                        Blood Sciences Department
+                    </span>
+                </div>
+
+                <div class="card-body">
+                  <p class="is-size-5" style="color:#26547C;"><strong style="color:#EF476F;">Details for {{$patient->name}}</strong></p>
+                
+                <hr>
+                <ul class="list-group">
+                  <li class="is-size-5" style="color:#26547C;">
+                    <b>Name</b>: {{$patient->name}}
+                  </li>
+                  <li class="is-size-5" style="color:#26547C;">
+                    <b>Hospital Number</b>: {{$patient->hospital_number}}
+                  </li>
+                  
+                  <li class="is-size-5" style="color:#26547C;">
+                    <b>Date of Birth</b>: {{$patient->dob}}
+                  </li>
+                </ul>
+                <br>
+
+                <!-- To open Modal for Starting Test -->
+                  <button 
+                     id="start-test-section" 
+                     type="button" 
+                     class="button is-primary is-outlined" 
+                     data-toggle="modal" 
+                     data-target="#startNowModal"
+                     style="color:#26547C;"><i class="fas fa-dna is-size-4">
+                     </i></button><span class="is-size-5" style="color:#26547C;"> Start Now</span>
+                     
+                  </button>
+                </div>
+        </div>
+        </div>
+    </div>
+</div>
+
+
+    
+
+
+
 
 
  <!-- Modal to Start Test -->
