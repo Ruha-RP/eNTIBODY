@@ -47,7 +47,14 @@
                    <h2 class="subtitle" style="color:#EF476F;">Further Reading</h2>
                     <p><a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=Rhesus+D+Typing">PubMed</a></p>
                     </div>
+
+                    <hr>
+                <p>Return to home</p>
+                <i class="fas fa-home is-size-5" style="color:#26547C;" onclick="location.href='/home';"></i>
                 </div>
+
+
+
             </div>
         </div>
     </div>
