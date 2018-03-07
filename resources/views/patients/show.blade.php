@@ -73,12 +73,17 @@
         <!-- This part outlines the SOP -->
         <p class="is-size-5" style="color:#26547C;"><strong style="color:#EF476F;">Standard Operating Procedure for RhD Typing</strong></p>
         <div class="container">
-        <p><b>Steps:</b><p>
+    
         <ol> 
-            <li>first step</li>
-            <li>second step</li>
-            <li>third step</li>
-            <li>fourth step</li>
+            <li><b>Step 1</b>:Label the plate with patient number and test identification </li>
+            <li><b>Step 2:</b> Prepare 20% cell suspension for cells being tested. </li>
+            <li><b>Step 3:</b> Add 2 drops of anti-D reagents (Monoclonal and Blended) in D1, D2 marked </li>
+            <li><b>Step 4:</b> Add 2 drops of positive and negative control reagents in the properly labelled areas
+            Then add 1 drop of 20%  </li>
+            <li><b>Step 5:</b> Then add 1 drop of 20% patient cell suspension to reagent and control areas </li>
+            <li><b>Step 6:</b> Mix gently and wait for 2-4 minutes</li>
+            <li><b>Step 7:</b> hen add 1 drop of 20% patient cell suspension to reagent and control areas </li>
+            <li><b>Step 8:</b> Read, interpret and record the test and control results immediately</li>
         </ol>
       </div>
         <!-- This part gives functionality of a timer -->

@@ -14,6 +14,7 @@
             
             <div class="card-body">
                     <p class="is-size-5" style="color:#26547C;"><strong style="color:#EF476F;">Input your Observations based on the reactions on the microplate</strong></p>
+
             </div>
 
             <div class="card-body">
