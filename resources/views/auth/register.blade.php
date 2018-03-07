@@ -4,8 +4,14 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card card-default">
-                <div class="card-header">Register</div>
+
+
+            <div class="card border-warning mb-3">
+                <div class="card-header">
+                    <span class="is-size-3" style="color:#26547C;">
+                        Blood Sciences Department: <b style="color:#EF476F;">Register</b>
+                    </span>
+                </div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -63,7 +69,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="button is-primary is-outlined" style="color:#26547C;">
                                     Register
                                 </button>
                             </div>
