@@ -39,7 +39,9 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', false),
+    'debug' => env('APP_DEBUG', true),
+
+    'log'=>'errorlog',
 
     /*
     |--------------------------------------------------------------------------
