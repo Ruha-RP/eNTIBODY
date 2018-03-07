@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card card-default">
                 <div class="card-header">
-                <h3 class="title .is-turquoise">USER Dashboard</h3>
+                <h3 class="title .is-turquoise">{{ Auth::user()->name }} Dashboard</h3>
                 </div>
 
                 <div class="card-body">
