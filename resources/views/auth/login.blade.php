@@ -4,10 +4,11 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
+
             <div class="card border-warning mb-3">
                 <div class="card-header">
-                    <span class="is-size-4" style="color:#26547C;">
-                        Login
+                    <span class="is-size-3" style="color:#26547C;">
+                        Blood Sciences Department: <b style="color:#EF476F;">Login</b>
                     </span>
                 </div>
 

@@ -4,27 +4,30 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card card-default">
-                <div class="card-header">USER Dashboard</div>
 
-                <div class="card-body">
-                    <h1> TEST SCREEN </h1>
-                    <p>Perform Test here</p>
-                    <p> Active Button: adds patient details</p>
-                    <p> Inactive Button: Start Now, leads to another SOP after activation, happens after patient details input</p>   
-                    <hr>
+            <div class="card border-warning mb-3">
+                <div class="card-header">
+                    <span class="is-size-3" style="color:#26547C;">
+                        Blood Sciences Department
+                    </span>
+            </div>
 
-                    <!-- To open Modal for Patient Details Input -->
-                    <button 
-                       id="patient-details-section" 
-                       type="button" 
-                       class="button" 
-                      onclick="location.href='/patients/create';">
-                       Input Patient Details
-                    </button>
+            <div class="card-body">
+                    <p class="is-size-5" style="color:#26547C;"><strong style="color:#EF476F;">Rh D Test Screen</strong></p>
+                    <p class="is-size-5" style="color:#26547C;">Before beginning the test, Please Input the Correct Patient Details as indicated on the 
+                      <ul class="is-size-5" style="color:#26547C;">
+                          <li><i class="fab fa-wpforms"></i>  Sample Vial</li>
+                          <li><i class="fas fa-tint"></i>  Request form</li>
+                          
+                      </ul>
+                    </p>
+            </div>
 
-                    
-        
+            <div class="card-body">
+                    <div class="links">
+
+                       <button class="button is-primary is-outlined" style="color:#26547C;" onclick="location.href='/patients/create';"><i class="fas fa-users is-size-4" style="color:#26547C;"></i></button><span class="is-size-5" style="color:#26547C;"> Input Patient Details</span>
+                        <br><br>
                 </div>
             </div>
 

@@ -4,30 +4,35 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card card-default">
+
+            <div class="card border-warning mb-3">
                 <div class="card-header">
-                <h3 class="title .is-turquoise">{{ Auth::user()->name }} Dashboard</h3>
+                    <span class="is-size-3" style="color:#26547C;">
+                        Blood Sciences Department
+                    </span>
                 </div>
 
                 <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    @component('components.who')
-                    @endcomponent
+                    <p class="is-size-5" style="color:#26547C;">Welcome <strong style="color:#EF476F;">{{ Auth::user()->name }},</strong></p>
+                    <p class="is-size-5" style="color:#26547C;">Please select one of the actions below to proceed with Rhesus D Antigen Typing</p>
                 </div>
 
                 <div class="card-body">
                     <div class="links">
                        <!--  Shows Test Info  -->
-                        <button class="button" onclick="location.href='/users/info';">Test Info</button>
+                        
+                        <button class="button is-primary is-outlined" style="color:#26547C;" onclick="location.href='/users/info';"><i class="fas fa-info is-size-4" style="color:#26547C;"></i></button><span class="is-size-5" style="color:#26547C;"> Test Information</span>
+                        <br><br>
+                        
                         <!-- Shows all patients -->
-                        <button class="button" onclick="location.href='/users/patients';">View All Patients</button>
+                        <button class="button is-primary is-outlined" style="color:#26547C;" onclick="location.href='/users/patients';"><i class="fas fa-users is-size-4" style="color:#26547C;"></i></button><span class="is-size-5" style="color:#26547C;"> View All Patients</span>
+                        <br><br>
+                        
                         <!-- Sends to Test Screen -->
-                        <button class="button" onclick="location.href='/users/test';">Test Now</button>
+                        <button class="button is-primary is-outlined" style="color:#26547C;" onclick="location.href='/users/test';"><i class="fas fa-flask is-size-4" style="color:#26547C;"></i></button><span class="is-size-5" style="color:#26547C;"> Test Now</span>
+                        <br><br>
+                        
+                        
                     </div>
                 </div>
 
@@ -37,3 +42,6 @@
     </div>
 </div>
 @endsection
+
+
+                        
