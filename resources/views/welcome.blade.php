@@ -8,34 +8,78 @@
             <div class="card border-warning mb-3">
                 <div class="card-header">
                     <span class="is-size-3" style="color:#26547C;">
-                        eNTIBODY
+                        Blood Sciences Department: <b style="color:#EF476F;">Login</b>
                     </span>
                 </div>
 
+                
                 <div class="card-body">
-                    <p class="is-size-5" style="color:#26547C;"> <strong style="color:#EF476F;">Laboratory Result Interpretation and Information Management System</strong></p>
-                    <ul class="is-size-5" style="color:#26547C;">
-                          
-                          <li><i class="fas fa-clock" style="color:#EF476F;"></i>  Efficient</li>
-                          <li><i class="fab fa-wpforms" style="color:#EF476F;"></i>  Accurate Record Keeping</li>
-                          <li><i class="fas fa-lock" style="color:#EF476F;"></i>  Secure</li>
-                          <li><i class="fas fa-check" style="color:#EF476F;"></i>  Smart</li>
-                          
-                      </ul>
-                </div>
+                    <form method="POST" action="{{ route('login') }}">
+                        @csrf
 
-                <div class="card-body">
-                    
+
                         
-                    </div>
+                        <div class="form-group row">
+                            <label for="email" class="col-sm-4 col-form-label text-md-right">
+                                <span class="is-size-6" style="color:#26547C;">
+                                Employee Email Address:
+                                 </span>
+                            </label>
+
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
+
+                                @if ($errors->has('email'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="password" class="col-md-4 col-form-label text-md-right">
+                                <span class="is-size-6" style="color:#26547C;">
+                                    Password:
+                                </span>
+                            </label>
+
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
+
+                                @if ($errors->has('password'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('password') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-md-6 offset-md-4">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Remember Me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row mb-0">
+                            <div class="col-md-8 offset-md-4">
+                                <button type="submit" class="button is-primary is-outlined" style="color:#26547C;">
+                                    Login
+                                </button>
+
+                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    Forgot Your Password?
+                                </a>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-
-
             </div>
         </div>
     </div>
 </div>
 @endsection
-
-
-                        
