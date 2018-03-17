@@ -1,4 +1,4 @@
-# eNTIGEN
+# eNTIBODY
 
 Laboratory Information & Result Interpretation System
 
